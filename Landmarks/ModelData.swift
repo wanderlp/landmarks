@@ -7,6 +7,9 @@
 
 import Foundation
 
+//  Array Landmark is initializing from landmarkData.json
+var landmarks: [Landmark] = load("landmarkData.json")
+
 //  load(_:) method fetchs JSON data with a
 //  given name from the app's main bundle.
 //  This method relies on the return type's
