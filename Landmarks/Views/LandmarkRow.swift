@@ -26,6 +26,8 @@ struct LandmarkRow: View {
     }
 }
 
+//  The code writed in a preview provider only
+//  changes what Xcode displays in the canvas.
 struct LandmarkRow_Previews: PreviewProvider {
     static var previews: some View {
         Group {
