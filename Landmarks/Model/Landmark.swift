@@ -9,7 +9,8 @@ import Foundation
 import SwiftUI
 import CoreLocation
 
-struct Landmark: Hashable, Codable {
+//  Identifiable protocol requires id property
+struct Landmark: Hashable, Codable, Identifiable {
     var id: Int
     var name: String
     var park: String

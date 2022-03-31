@@ -15,7 +15,7 @@ struct LandmarkList: View {
         //  property that uniquely identifies each element,
         //  or by making your data type conform to the
         //  Identifiable protocol.
-        List(landmarks, id: \.id) { landmark in LandmarkRow(landmark: landmark)}
+        List(landmarks) { landmark in LandmarkRow(landmark: landmark)}
     }
 }
 
