@@ -6,6 +6,14 @@
 //
 
 import Foundation
+import Combine
+
+//  SwiftUI subscribes to your observable object,
+//  and updates any views that need refresing
+//  when the data changes.
+final class ModelData: ObservableObject {
+    
+}
 
 //  Array Landmark is initializing from landmarkData.json
 var landmarks: [Landmark] = load("landmarkData.json")
