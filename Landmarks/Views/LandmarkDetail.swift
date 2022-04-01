@@ -19,22 +19,22 @@ struct LandmarkDetail: View {
                 .padding(.bottom, -130.0)
                 .offset(y: /*@START_MENU_TOKEN@*/-130.0/*@END_MENU_TOKEN@*/)
             VStack(alignment: .leading) {
-                Text("Turtle Rock")
+                Text(landmark.name)
                     .font(.title)
                 .foregroundColor(.black)
                 HStack {
-                    Text("Joshua Tree National Park")
+                    Text(landmark.park)
                         Spacer()
-                    Text("Park's State")
+                    Text(landmark.state)
                 }
                 .font(.subheadline)
                 .foregroundColor(.secondary)
                 
                 Divider()
                 
-                Text("About Turtle Rock")
+                Text("About \(landmark.name)")
                     .font(.title2)
-                Text("Descriptive text goes here")
+                Text(landmark.description)
             }
             .padding()
         }
@@ -45,6 +45,6 @@ struct LandmarkDetail: View {
 
 struct LandmarkDetail_Previews: PreviewProvider {
     static var previews: some View {
-        LandmarkDetail(landmark: landmarks[0])
+        LandmarkDetail(landmark: landmarks[1])
     }
 }
