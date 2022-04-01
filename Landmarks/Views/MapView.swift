@@ -31,6 +31,15 @@ struct MapView: View {
         //  visible in the user interface.
         Map(coordinateRegion: $region)
     }
+    
+    //  This method updtaes the region based on a
+    //  coordinate value.
+    private func setRegion(_ coordinate: CLLocationCoordinate2D) {
+        region = MKCoordinateRegion(
+            center: coordinate,
+            span: MKCoordinateSpan(latitudeDelta: 0.2, longitudeDelta: 0.2)
+        )
+    }
 }
 
 struct MapView_Previews: PreviewProvider {
