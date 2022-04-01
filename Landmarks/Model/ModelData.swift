@@ -13,7 +13,7 @@ import Combine
 //  when the data changes.
 final class ModelData: ObservableObject {
     //  Array Landmark is initializing from landmarkData.json
-    var landmarks: [Landmark] = load("landmarkData.json")
+    @Published var landmarks: [Landmark] = load("landmarkData.json")
 }
 
 //  load(_:) method fetchs JSON data with a
