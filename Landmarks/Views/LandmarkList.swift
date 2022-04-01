@@ -8,6 +8,16 @@
 import SwiftUI
 
 struct LandmarkList: View {
+    //  State is a value, or a set of values, that can change over
+    //  time, and that affects a view's behavior, content, or layout.
+    @State private var showFavoritesOnly = false
+    
+    var filteredLandmarks: [Landmark] {
+        landmarks.filter {
+            landmark in (!showFavoritesOnly || landmark.isFavorite)
+        }
+    }
+    
     var body: some View {
         //  Lists work with identificable data. You can make
         //  your data identifiable in one of two ways: by
@@ -16,7 +26,7 @@ struct LandmarkList: View {
         //  or by making your data type conform to the
         //  Identifiable protocol.
         NavigationView {
-            List(landmarks) { landmark in
+            List(filteredLandmarks) { landmark in
                 NavigationLink {
                     LandmarkDetail(landmark: landmark)
                 } label: {
