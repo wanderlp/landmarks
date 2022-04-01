@@ -12,11 +12,9 @@ import Combine
 //  and updates any views that need refresing
 //  when the data changes.
 final class ModelData: ObservableObject {
-    
+    //  Array Landmark is initializing from landmarkData.json
+    var landmarks: [Landmark] = load("landmarkData.json")
 }
-
-//  Array Landmark is initializing from landmarkData.json
-var landmarks: [Landmark] = load("landmarkData.json")
 
 //  load(_:) method fetchs JSON data with a
 //  given name from the app's main bundle.
