@@ -1,24 +1,21 @@
 //
-//  ContentView.swift
+//  LandmarkDetail.swift
 //  Landmarks
 //
-//  Created by Wanderson López on 29/03/22.
+//  Created by Wanderson López on 31/03/22.
 //
-//  By default, Swift UI view files declare two
-//  structures
 
 import SwiftUI
 
-//  The first structure conforms to the View
-//  protocol and describes the view's content
-//  and layout.
-struct ContentView: View {
+struct LandmarkDetail: View {
+    var landmark: Landmark
+    
     var body: some View {
-        VStack {
-            MapView()
+        ScrollView {
+            MapView(coordinate: landmark.locationCoordinate)
                 .frame(height: 300.0)
                 .ignoresSafeArea(edges: .top)
-            CircleImage()
+            CircleImage(image: landmark.image)
                 .padding(.bottom, -130.0)
                 .offset(y: /*@START_MENU_TOKEN@*/-130.0/*@END_MENU_TOKEN@*/)
             VStack(alignment: .leading) {
@@ -40,16 +37,14 @@ struct ContentView: View {
                 Text("Descriptive text goes here")
             }
             .padding()
-            
-            Spacer()
         }
+        .navigationTitle(landmark.name)
+        .navigationBarTitleDisplayMode(.inline)
     }
 }
 
-//  The second structure declares a preview
-//  for that view
-struct ContentView_Previews: PreviewProvider {
+struct LandmarkDetail_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        LandmarkDetail(landmark: landmarks[0])
     }
 }
