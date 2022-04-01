@@ -16,7 +16,12 @@ struct LandmarkList: View {
         //  or by making your data type conform to the
         //  Identifiable protocol.
         NavigationView {
-            List(landmarks) { landmark in LandmarkRow(landmark: landmark)
+            List(landmarks) { landmark in
+                NavigationLink {
+                    LandmarkDetail()
+                } label: {
+                    LandmarkRow(landmark: landmark)
+                }
             }.navigationTitle(/*@START_MENU_TOKEN@*/"Landmarks"/*@END_MENU_TOKEN@*/)
         }
     }
