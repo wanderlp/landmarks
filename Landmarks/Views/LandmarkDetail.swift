@@ -8,12 +8,14 @@
 import SwiftUI
 
 struct LandmarkDetail: View {
+    var landmark: Landmark
+    
     var body: some View {
         VStack {
-            MapView()
+            MapView(coordinate: landmark.locationCoordinate)
                 .frame(height: 300.0)
                 .ignoresSafeArea(edges: .top)
-            CircleImage()
+            CircleImage(image: landmark.image)
                 .padding(.bottom, -130.0)
                 .offset(y: /*@START_MENU_TOKEN@*/-130.0/*@END_MENU_TOKEN@*/)
             VStack(alignment: .leading) {
@@ -43,6 +45,6 @@ struct LandmarkDetail: View {
 
 struct LandmarkDetail_Previews: PreviewProvider {
     static var previews: some View {
-        LandmarkDetail()
+        LandmarkDetail(landmark: landmarks[0])
     }
 }
