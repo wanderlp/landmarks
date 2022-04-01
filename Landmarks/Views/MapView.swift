@@ -30,6 +30,7 @@ struct MapView: View {
         //  match the part of the map that's currently
         //  visible in the user interface.
         Map(coordinateRegion: $region)
+            .onAppear{setRegion(coordinate)}
     }
     
     //  This method updtaes the region based on a
