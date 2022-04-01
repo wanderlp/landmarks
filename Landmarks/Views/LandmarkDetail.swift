@@ -11,7 +11,7 @@ struct LandmarkDetail: View {
     var landmark: Landmark
     
     var body: some View {
-        VStack {
+        ScrollView {
             MapView(coordinate: landmark.locationCoordinate)
                 .frame(height: 300.0)
                 .ignoresSafeArea(edges: .top)
@@ -37,8 +37,6 @@ struct LandmarkDetail: View {
                 Text("Descriptive text goes here")
             }
             .padding()
-            
-            Spacer()
         }
     }
 }
