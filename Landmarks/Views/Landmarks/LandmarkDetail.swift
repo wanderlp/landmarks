@@ -24,9 +24,18 @@ struct LandmarkDetail: View {
                 .padding(.bottom, -130.0)
                 .offset(y: /*@START_MENU_TOKEN@*/-130.0/*@END_MENU_TOKEN@*/)
             VStack(alignment: .leading) {
-                Text(landmark.name)
-                    .font(.title)
-                .foregroundColor(.black)
+                // Name and favorite button
+                HStack {
+                    Text(landmark.name)
+                        .font(.title)
+                    .foregroundColor(.black)
+                    
+                    Spacer()
+                    
+                    FavoriteButton(isSet: $modelData.landmarks[landmarkIndex].isFavorite)
+                }
+                
+                // Park and location
                 HStack {
                     Text(landmark.park)
                         Spacer()
@@ -37,6 +46,7 @@ struct LandmarkDetail: View {
                 
                 Divider()
                 
+                // About landmark
                 Text("About \(landmark.name)")
                     .font(.title2)
                 Text(landmark.description)
