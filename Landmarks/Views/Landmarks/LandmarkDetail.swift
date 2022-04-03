@@ -8,7 +8,12 @@
 import SwiftUI
 
 struct LandmarkDetail: View {
+    @EnvironmentObject var modelData: ModelData
     var landmark: Landmark
+    
+    var landmarkIndex: Int {
+        modelData.landmarks.firstIndex(where: { $0.id == landmark.id })!
+    }
     
     var body: some View {
         ScrollView {
@@ -19,22 +24,32 @@ struct LandmarkDetail: View {
                 .padding(.bottom, -130.0)
                 .offset(y: /*@START_MENU_TOKEN@*/-130.0/*@END_MENU_TOKEN@*/)
             VStack(alignment: .leading) {
-                Text("Turtle Rock")
-                    .font(.title)
-                .foregroundColor(.black)
+                // Name and favorite button
                 HStack {
-                    Text("Joshua Tree National Park")
+                    Text(landmark.name)
+                        .font(.title)
+                    .foregroundColor(.black)
+                    
+                    Spacer()
+                    
+                    FavoriteButton(isSet: $modelData.landmarks[landmarkIndex].isFavorite)
+                }
+                
+                // Park and location
+                HStack {
+                    Text(landmark.park)
                         Spacer()
-                    Text("Park's State")
+                    Text(landmark.state)
                 }
                 .font(.subheadline)
                 .foregroundColor(.secondary)
                 
                 Divider()
                 
-                Text("About Turtle Rock")
+                // About landmark
+                Text("About \(landmark.name)")
                     .font(.title2)
-                Text("Descriptive text goes here")
+                Text(landmark.description)
             }
             .padding()
         }
@@ -44,7 +59,10 @@ struct LandmarkDetail: View {
 }
 
 struct LandmarkDetail_Previews: PreviewProvider {
+    static let modelData = ModelData()
+    
     static var previews: some View {
-        LandmarkDetail(landmark: landmarks[0])
+        LandmarkDetail(landmark: modelData.landmarks[1])
+            .environmentObject(modelData)
     }
 }
