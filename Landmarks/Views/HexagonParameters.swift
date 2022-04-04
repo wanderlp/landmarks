@@ -20,6 +20,11 @@ struct HexagonParameters {
         let control: CGPoint
     }
     
+    //  The values are stored as a fraction of a unit
+    //  square having its origin in the upper left, with
+    //  positive x to the right and positive y down.
+    //  Later, you'll use these fractions to find the
+    //  actual points of a hexagon with a given size.
     static let segments = [
         // 1
         Segment(
