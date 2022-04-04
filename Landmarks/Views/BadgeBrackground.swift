@@ -20,17 +20,35 @@ struct BadgeBrackground: View {
             path.move(
                 to: CGPoint(
                     x: width * 0.95,
-                    y: height * 0.20
+                    y: height * 0.20 + HexagonParameters.adjustment
                 )
             )
             
             //  Drawing the lines for each point of the shape data
             //  to create a rough hexagonal shape.
             HexagonParameters.segments.forEach { segment in
+                //  The addLine(to:) method takes a single
+                //  point and draws it. Successive calls to add
+                //  Line(to:) begin a line at the previous point
+                //  and cointinue to the new point.
                 path.addLine(
                     to: CGPoint(
                         x: width * segment.line.x,
                         y: height * segment.line.y
+                    )
+                )
+                
+                //  Use the addQuadCurve(to:control:)
+                //  method to draw the Bézier curves for the
+                //  badge's corner
+                path.addQuadCurve(
+                    to: CGPoint(
+                        x: width * segment.curve.x,
+                        y: height * segment.curve.y
+                    ),
+                    control: CGPoint(
+                        x: width * segment.control.x,
+                        y: height * segment.control.y
                     )
                 )
             }
