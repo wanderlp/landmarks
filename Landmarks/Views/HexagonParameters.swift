@@ -20,6 +20,9 @@ struct HexagonParameters {
         let control: CGPoint
     }
     
+    // This adjustment lets you tune the shape of the hexagon
+    static let adjustment: CGFloat = 0.085
+    
     //  The values are stored as a fraction of a unit
     //  square having its origin in the upper left, with
     //  positive x to the right and positive y down.
@@ -34,15 +37,15 @@ struct HexagonParameters {
         ),
         // 2
         Segment(
-            line:    CGPoint(x: 0.05, y: 0.20),
-            curve:   CGPoint(x: 0.00, y: 0.30),
-            control: CGPoint(x: 0.00, y: 0.25)
+            line:    CGPoint(x: 0.05, y: 0.20 + adjustment),
+            curve:   CGPoint(x: 0.00, y: 0.30 + adjustment),
+            control: CGPoint(x: 0.00, y: 0.25 + adjustment)
         ),
         // 3
         Segment(
-            line:    CGPoint(x: 0.00, y: 0.70),
-            curve:   CGPoint(x: 0.05, y: 0.80),
-            control: CGPoint(x: 0.00, y: 0.75)
+            line:    CGPoint(x: 0.00, y: 0.70 - adjustment),
+            curve:   CGPoint(x: 0.05, y: 0.80 - adjustment),
+            control: CGPoint(x: 0.00, y: 0.75 - adjustment)
         ),
         // 4
         Segment(
@@ -52,15 +55,15 @@ struct HexagonParameters {
         ),
         // 5
         Segment(
-            line:    CGPoint(x: 0.95, y: 0.80),
-            curve:   CGPoint(x: 1.00, y: 0.70),
-            control: CGPoint(x: 1.00, y: 0.75)
+            line:    CGPoint(x: 0.95, y: 0.80 - adjustment),
+            curve:   CGPoint(x: 1.00, y: 0.70 - adjustment),
+            control: CGPoint(x: 1.00, y: 0.75 - adjustment)
         ),
         // 6
         Segment(
-            line:    CGPoint(x: 1.00, y: 0.30),
-            curve:   CGPoint(x: 0.95, y: 0.20),
-            control: CGPoint(x: 1.00, y: 0.25)
+            line:    CGPoint(x: 1.00, y: 0.30 + adjustment),
+            curve:   CGPoint(x: 0.95, y: 0.20 + adjustment),
+            control: CGPoint(x: 1.00, y: 0.25 + adjustment)
         )
     ]
 }
