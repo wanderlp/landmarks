@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct BadgeBrackground: View {
+struct BadgeBackground: View {
     var body: some View {
         //  Wrap the path in a GeometryReader so the
         //  badge can use the size of its containing view,
@@ -97,8 +97,8 @@ struct BadgeBrackground: View {
     )
 }
 
-struct BadgeBrackground_Previews: PreviewProvider {
+struct BadgeBackground_Previews: PreviewProvider {
     static var previews: some View {
-        BadgeBrackground()
+        BadgeBackground()
     }
 }
