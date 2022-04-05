@@ -78,6 +78,10 @@ struct BadgeBrackground: View {
                 endPoint:   UnitPoint(x: 0.5, y: 0.6)
             ))
         }
+        //  By preserving a 1:1 aspect ratio, the badge
+        //  maintains its position at the center of the view,
+        //  even if its ancestor views aren't square
+        .aspectRatio(1, contentMode: .fit)
     }
     
     static let gradientStart = Color(
