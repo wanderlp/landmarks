@@ -23,9 +23,17 @@ struct BadgeBrackground: View {
                 //var width: CGFloat = 100.0
                 var width: CGFloat = min(geometry.size.width, geometry.size.height)
                 let height = width
+                
+                //  Scales the shape on the x-axis using xScale,
+                //  and then add xOffset to recenter the shape
+                //  within its geometry.
+                let xScale: CGFloat = 0.832
+                let xOffset = (width * (1.0 - xScale)) / 2.0
+                width *= xScale
+                
                 path.move(
                     to: CGPoint(
-                        x: width * 0.95,
+                        x: width * 0.95 + xOffset,
                         y: height * 0.20 + HexagonParameters.adjustment
                     )
                 )
@@ -39,7 +47,7 @@ struct BadgeBrackground: View {
                     //  and cointinue to the new point.
                     path.addLine(
                         to: CGPoint(
-                            x: width * segment.line.x,
+                            x: width * segment.line.x + xOffset,
                             y: height * segment.line.y
                         )
                     )
@@ -49,11 +57,11 @@ struct BadgeBrackground: View {
                     //  badge's corner
                     path.addQuadCurve(
                         to: CGPoint(
-                            x: width * segment.curve.x,
+                            x: width * segment.curve.x + xOffset,
                             y: height * segment.curve.y
                         ),
                         control: CGPoint(
-                            x: width * segment.control.x,
+                            x: width * segment.control.x + xOffset,
                             y: height * segment.control.y
                         )
                     )
