@@ -28,6 +28,7 @@
 		7BD61D6927FF8B56006E19D0 /* BadgeSymbol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD61D6427FF8B56006E19D0 /* BadgeSymbol.swift */; };
 		7BD61D6A27FF8B56006E19D0 /* BadgeBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD61D6527FF8B56006E19D0 /* BadgeBackground.swift */; };
 		7BD61D6B27FF8B56006E19D0 /* Badge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD61D6627FF8B56006E19D0 /* Badge.swift */; };
+		7BD61D6F27FFA287006E19D0 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD61D6E27FFA287006E19D0 /* Profile.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +54,7 @@
 		7BD61D6427FF8B56006E19D0 /* BadgeSymbol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BadgeSymbol.swift; sourceTree = "<group>"; };
 		7BD61D6527FF8B56006E19D0 /* BadgeBackground.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BadgeBackground.swift; sourceTree = "<group>"; };
 		7BD61D6627FF8B56006E19D0 /* Badge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Badge.swift; sourceTree = "<group>"; };
+		7BD61D6E27FFA287006E19D0 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +133,7 @@
 				7B05E9AC27F8CD58001C56BE /* Landmarks */,
 				7BD61D6027FF880D006E19D0 /* Categories */,
 				7B05E9AD27F8CD60001C56BE /* Helpers */,
+				7BD61D6E27FFA287006E19D0 /* Profile.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -262,6 +265,7 @@
 				7B86B15927F54BEA001337CE /* Landmark.swift in Sources */,
 				7B86B16027F557F6001337CE /* LandmarkRow.swift in Sources */,
 				7BD61D5D27FF6421006E19D0 /* CategoryRow.swift in Sources */,
+				7BD61D6F27FFA287006E19D0 /* Profile.swift in Sources */,
 				7B86B15B27F5526D001337CE /* ModelData.swift in Sources */,
 				7BD61D6A27FF8B56006E19D0 /* BadgeBackground.swift in Sources */,
 			);
