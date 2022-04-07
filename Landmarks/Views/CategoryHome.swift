@@ -9,7 +9,13 @@ import SwiftUI
 
 struct CategoryHome: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        //  Use NavigationViews along with
+        //  NavigationLink instances and related
+        //  modifiers to build hierarchical navigation
+        //  structures in your app.
+        NavigationView {
+            Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        }
     }
 }
 
