@@ -16,8 +16,12 @@ struct CategoryHome: View {
         //  modifiers to build hierarchical navigation
         //  structures in your app.
         NavigationView {
-            Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-                .navigationTitle("Featured")
+            List {
+                ForEach(modelData.categories.keys.sorted(), id: \.self) { key in
+                    Text(key)
+                }
+            }
+            .navigationTitle("Featured")
         }
     }
 }
