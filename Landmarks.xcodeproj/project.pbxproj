@@ -29,6 +29,7 @@
 		7BD61D6A27FF8B56006E19D0 /* BadgeBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD61D6527FF8B56006E19D0 /* BadgeBackground.swift */; };
 		7BD61D6B27FF8B56006E19D0 /* Badge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD61D6627FF8B56006E19D0 /* Badge.swift */; };
 		7BD61D6F27FFA287006E19D0 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD61D6E27FFA287006E19D0 /* Profile.swift */; };
+		7BD61D7227FFA531006E19D0 /* ProfileHost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD61D7127FFA531006E19D0 /* ProfileHost.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +56,7 @@
 		7BD61D6527FF8B56006E19D0 /* BadgeBackground.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BadgeBackground.swift; sourceTree = "<group>"; };
 		7BD61D6627FF8B56006E19D0 /* Badge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Badge.swift; sourceTree = "<group>"; };
 		7BD61D6E27FFA287006E19D0 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
+		7BD61D7127FFA531006E19D0 /* ProfileHost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHost.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -182,6 +184,7 @@
 			isa = PBXGroup;
 			children = (
 				7BD61D6E27FFA287006E19D0 /* Profile.swift */,
+				7BD61D7127FFA531006E19D0 /* ProfileHost.swift */,
 			);
 			path = Profiles;
 			sourceTree = "<group>";
@@ -260,6 +263,7 @@
 				7BD61D6827FF8B56006E19D0 /* HexagonParameters.swift in Sources */,
 				7B06C2D927F3C152009544E9 /* ContentView.swift in Sources */,
 				7B06C2E727F3C9D4009544E9 /* MapView.swift in Sources */,
+				7BD61D7227FFA531006E19D0 /* ProfileHost.swift in Sources */,
 				7B06C2D727F3C152009544E9 /* LandmarksApp.swift in Sources */,
 				7B05E9AB27F8CB7D001C56BE /* FavoriteButton.swift in Sources */,
 				7BD61D6927FF8B56006E19D0 /* BadgeSymbol.swift in Sources */,

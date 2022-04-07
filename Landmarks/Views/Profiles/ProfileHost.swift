@@ -4,6 +4,9 @@
 //
 //  Created by Wanderson López on 7/04/22.
 //
+//  The ProfileHost view will host both a static,
+//  summary view of profile information and an
+//  edit mode.
 
 import SwiftUI
 
