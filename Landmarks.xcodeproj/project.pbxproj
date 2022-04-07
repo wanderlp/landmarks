@@ -223,11 +223,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				7B06C2D927F3C152009544E9 /* ContentView.swift in Sources */,
+				7BD61D5827FD0258006E19D0 /* Badge.swift in Sources */,
 				7B06C2E727F3C9D4009544E9 /* MapView.swift in Sources */,
+				7BD61D5627FD014C006E19D0 /* RotatedBadgeSymbol.swift in Sources */,
 				7B06C2D727F3C152009544E9 /* LandmarksApp.swift in Sources */,
 				7B05E9AB27F8CB7D001C56BE /* FavoriteButton.swift in Sources */,
 				7BD61D5B27FF3CCC006E19D0 /* CategoryHome.swift in Sources */,
 				7B86B16227F55C71001337CE /* LandmarkList.swift in Sources */,
+				7BD61D5227FBBA31006E19D0 /* BadgeBackground.swift in Sources */,
 				7B86B16427F69A7B001337CE /* LandmarkDetail.swift in Sources */,
 				7B06C2E527F3C7D3009544E9 /* CircleImage.swift in Sources */,
 				7BD61D5F27FF789E006E19D0 /* CategoryItem.swift in Sources */,
