@@ -31,6 +31,7 @@
 		7BD61D6F27FFA287006E19D0 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD61D6E27FFA287006E19D0 /* Profile.swift */; };
 		7BD61D7227FFA531006E19D0 /* ProfileHost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD61D7127FFA531006E19D0 /* ProfileHost.swift */; };
 		7BD61D7427FFA5E0006E19D0 /* ProfileSummary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD61D7327FFA5E0006E19D0 /* ProfileSummary.swift */; };
+		7BD61D7627FFAAC5006E19D0 /* HikeBadge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD61D7527FFAAC5006E19D0 /* HikeBadge.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,6 +60,7 @@
 		7BD61D6E27FFA287006E19D0 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		7BD61D7127FFA531006E19D0 /* ProfileHost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHost.swift; sourceTree = "<group>"; };
 		7BD61D7327FFA5E0006E19D0 /* ProfileSummary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSummary.swift; sourceTree = "<group>"; };
+		7BD61D7527FFAAC5006E19D0 /* HikeBadge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HikeBadge.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -177,6 +179,7 @@
 				7BD61D6427FF8B56006E19D0 /* BadgeSymbol.swift */,
 				7BD61D6527FF8B56006E19D0 /* BadgeBackground.swift */,
 				7BD61D6627FF8B56006E19D0 /* Badge.swift */,
+				7BD61D7527FFAAC5006E19D0 /* HikeBadge.swift */,
 			);
 			name = Badges;
 			path = ../../../../../GitHub/landmarks/Landmarks/Views/Badges;
@@ -275,6 +278,7 @@
 				7BD61D6B27FF8B56006E19D0 /* Badge.swift in Sources */,
 				7BD61D6727FF8B56006E19D0 /* RotatedBadgeSymbol.swift in Sources */,
 				7B86B16227F55C71001337CE /* LandmarkList.swift in Sources */,
+				7BD61D7627FFAAC5006E19D0 /* HikeBadge.swift in Sources */,
 				7B86B16427F69A7B001337CE /* LandmarkDetail.swift in Sources */,
 				7B06C2E527F3C7D3009544E9 /* CircleImage.swift in Sources */,
 				7BD61D5F27FF789E006E19D0 /* CategoryItem.swift in Sources */,
