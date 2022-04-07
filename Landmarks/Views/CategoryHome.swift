@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct CategoryHome: View {
+    @EnvironmentObject var modelData: ModelData
+    
     var body: some View {
         //  Use NavigationViews along with
         //  NavigationLink instances and related
@@ -23,5 +25,6 @@ struct CategoryHome: View {
 struct CategoryHome_Previews: PreviewProvider {
     static var previews: some View {
         CategoryHome()
+            .environmentObject(ModelData())
     }
 }
