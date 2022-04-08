@@ -17,6 +17,21 @@ struct ProfileEditor: View {
                 Divider()
                 TextField("Username", text: $profile.username)
             }
+            
+            Toggle(isOn: $profile.prefersNotificacions) {
+                Text("Enable Notificacions").bold()
+            }
+            
+            VStack {
+                Text("Seasonal Photo").bold()
+                
+                Picker("Seasonal Photo", selection: $profile.seasonalPhoto) {
+                    ForEach(Profile.Season.allCases) { season in
+                        Text(season.rawValue).tag(season)
+                    }
+                    .pickerStyle(.segmented)
+                }
+            }
         }
     }
 }
