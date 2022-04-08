@@ -15,6 +15,10 @@ final class ModelData: ObservableObject {
     //  Array Landmark is initializing from landmarkData.json
     @Published var landmarks: [Landmark] = load("landmarkData.json")
     
+    //  Included an instance of the user profile that persists
+    //  even after the user dismisses the profile view.
+    @Published var profile = Profile.default
+    
     //  Contains only the landmarks that have isFeatured set to true.
     var features: [Landmark] {
         landmarks.filter{ $0.isFeatured }
