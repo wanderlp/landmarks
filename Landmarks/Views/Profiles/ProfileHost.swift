@@ -17,6 +17,7 @@ struct ProfileHost: View {
     //  editMode value to read or write the edit
     //  scope.
     @Environment(\.editMode) var editMode
+    @EnvironmentObject var modelData: ModelData
     @State private var draftProfile = Profile.default
     
     var body: some View {
@@ -26,7 +27,7 @@ struct ProfileHost: View {
                 EditButton()
             }
             
-            ProfileSummary(profile: draftProfile)
+            ProfileSummary(profile: modelData.profile)
         }
         .padding()
     }
